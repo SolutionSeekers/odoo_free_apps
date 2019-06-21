@@ -17,7 +17,7 @@ class AuthSignupHome(AuthSignupHome):
         """ Shared helper that creates a res.partner out of a token """
         values = {key: qcontext.get(key) for key in (
             'login', 'name', 'password', 'phone', 'street', 'street2',
-            'zip', 'city', 'state_id', 'country_id', 'birthday')}
+            'zip', 'vat', 'city', 'state_id', 'country_id', 'birthday')}
         if not values:
             raise UserError(_("The form was not properly filled in."))
         if values.get('password') != qcontext.get('confirm_password'):
